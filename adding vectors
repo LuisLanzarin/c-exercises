@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x;
+    cout << "Quantos elementos serão inseridos? ";
+    cin >> x;
+    float vetor[9];
+    cout << "Digite os valores: ";
+    
+    for (int i = 0; i < x; i++) {
+        cin >> vetor[i];
+    }
+    cout << "os valores são: \n";
+    for (int i = 0; i < x; i++) {
+        cout << vetor[i] << endl;
+    }
+    cout << "A soma é: \n";
+    float soma = 0;
+    for (int i = 0; i < x; i++) {
+        soma += vetor[i];
+    }
+    cout << soma << endl;
+    float media = soma / x;
+    cout << "A média dos valores é: \n" << media;
+
+    return 0;
+}

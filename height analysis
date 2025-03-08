@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    string nome;
+    string vetornome[10];
+    int idade;
+    int vetoridade[10];
+    float altura;
+    float vetoraltura[10];
+    int x;
+    cout << "Quantas pessoas serão digitadas? ";
+    cin >> x;
+    for (int i = 1; i < x+1; i++) {
+        cout << "Dados da " << i << "a pessoa: \n";
+        cout << "nome: ";
+        cin >> vetornome[i];
+        cout << "idade: ";
+        cin >> vetoridade[i];
+        cout << "altura: ";
+        cin >> vetoraltura[i];
+    }
+    float media = 0;
+    for (int i = 1; i < x+1; i++) {
+        media += vetoraltura[i] / x;
+    }
+    cout << "A média das alturas é: " << media << endl;
+    float contadoridade = 0;
+    for (int i = 1; i < x+1; i++) {
+        if (vetoridade[i] < 16) {
+        contadoridade++;
+        }   
+    }
+    float percent = 0;
+    for (int i = 1; i < x+1; i++) {
+        if (vetoridade[i] < 16) {
+        percent = (contadoridade/float(x))*100;
+        cout << "Pessoas com menos de 16 anos: " << percent << "%" << endl;
+        cout << vetornome[i] << endl;
+        
+        }   
+    }
+    
+    
+    return 0;
+}

@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    float nota1, nota2;
+    cout << "Insira a primeira nota: ";
+    cin >> nota1;
+    cout << "Insira a segunda nota: ";
+    cin >> nota2;
+    float media_final;
+    media_final = (nota1+nota2)/2;
+    
+    if (media_final == 10) {
+        cout << "Aprovado com distinção! Sua média final é: " << media_final;
+    }
+    else if (media_final >= 7) {
+        cout << "Aprovado! sua média final é: " << media_final;
+    }
+    else {
+        cout << "Reprovado. Sua média final é: " << media_final;
+    }
+
+    return 0;
+}

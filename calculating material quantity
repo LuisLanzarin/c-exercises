@@ -1,0 +1,41 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+ 
+int main()
+{
+    float tamanho;
+    cout << "qual o tamanho da parede? (em m²)\n";
+    cin >> tamanho;
+    float tamanhof;
+    tamanhof = tamanho*1.1;
+    
+    float litros;
+    litros = tamanhof/6;
+    float baldesG;
+    baldesG = ceil(litros/18);
+    float baldesP;
+    baldesP = ceil(litros/3.6);
+    cout << "Serão utilizados " << baldesG << " latas grandes ou ";
+    cout << baldesP << " latas pequenas \n";
+    float valorG;
+    valorG = baldesG*80;
+    float valorP;
+    valorP = baldesP*25;
+    cout << "\no valor total é: R$ " << valorG << " em latas grandes ou R$ " 
+    << valorP << " em latas pequenas \n Ou \n";
+    
+    float MisturaG;
+    MisturaG = floor(litros/18);
+    float restante;
+    restante = litros - (MisturaG*18);
+    float MisturaP;
+    MisturaP = ceil(restante/3.6);
+    
+    cout << MisturaG << " latas grandes e " << MisturaP << " latas pequenas. \n";
+    float valorM;
+    valorM = (MisturaG*80)+(MisturaP*25);
+    cout << " total: R$ " << valorM;
+
+    return 0;
+}

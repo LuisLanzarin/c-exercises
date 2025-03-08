@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x;
+    cout << "Quantas pessoas serão digitadas? ";
+    cin >> x;
+    float altura[x];
+    char genero[x];
+    char M, F;
+    float contador = 0;
+    int home = 0;
+    int mulher = 0;
+    float media;
+    for (int i = 0; i < x; i++) {
+    cout << "Altura da " << i+1 << "a pessoa: ";
+    cin >> altura[i];
+    cout << "Genero da " << i+1 << "a pessoa: ";
+    cin >> genero[i];
+    }
+    for (int i = 0; i < x; i++) {
+    if (genero[i] == 'M') {
+        home++;
+    }
+    if (genero[i] == 'F'){
+        contador += altura[i];
+        mulher++;
+    }
+    }
+    float maior = 0;
+    float menor = altura[0];
+    for (int i = 0; i < x; i++) {
+    if (altura[i] > maior) {
+        maior = altura[i];
+    }
+    if (altura[i] < menor) {
+        menor = altura[i];
+    }
+    }
+    media = contador / mulher;
+    cout << "Menor altura: " << menor << endl;
+    cout << "Maior altura: " << maior << endl;
+    if (mulher > 0) {
+    cout << "Media da altura das mulheres: " << media << endl;
+    }
+    else if (mulher == 0) {
+        cout << "Nenhuma mulher!" << endl;
+    }
+    cout << "Número de homens: " << home;
+
+    return 0;
+}

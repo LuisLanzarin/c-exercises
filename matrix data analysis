@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x;
+    cout << "Qual a ordem da matriz? ";
+    cin >> x;
+    float a[x][x];
+    for (int i = 0; i < x; i++) {
+    for (int j = 0; j < x; j++) {
+        cout << "Elemento [" << i << "," << j << "]: ";
+        cin >> a[i][j];
+    }
+    }
+    float somapositiv = 0;
+    for (int i = 0; i < x; i++) {
+    for (int j = 0; j < x; j++) {
+    if (a[i][j] > 0) {
+        somapositiv += a[i][j];
+    }  
+    }
+    }
+    cout << "Soma dos positivos: " << somapositiv << endl;
+    int linha;
+    cout << "Escolha uma linha: ";
+    cin >> linha;
+    for (int j = 0; j < x; j++) {
+        cout << a[linha][j] << "\t" << endl;
+    }
+    int coluna;
+    cout << "Escolha uma coluna: ";
+    cin >> coluna;
+    for (int i = 0; i < x; i++) {
+        cout << a[i][coluna] << "\t" << endl;
+    }
+    cout << "Diagonal principal: " << endl;
+    for (int i = 0; i < x; i++) {
+    for (int j = 0; j < x; j++) {
+    if (i == j) {
+        cout << a[i][j] << "\t" << endl;
+    }
+    }
+    }
+    cout << endl;
+    cout << "Matriz alterada: " << endl;
+    for (int i = 0; i < x; i++) {
+    for (int j = 0; j < x; j++) {
+    if (a[i][j] < 0) {
+        a[i][j] = a[i][j] * a[i][j];
+    }
+    cout << a[i][j] << "\t";
+    }
+    cout << endl;
+    }
+    return 0;
+}

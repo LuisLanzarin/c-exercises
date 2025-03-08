@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    double x, y;
+    cout << "Digite os pontos: \n";
+    cin >> x >> y;
+    while(x != 0 && y != 0){
+        
+        if (x > 0 && y > 0) {
+            cout << "Quadrante 1\n";
+            cout << "Digite novos pontos\n";
+        cin >> x >> y;
+        }
+        
+        else if (x < 0 && y > 0) {
+            cout << "Quadrante 2\n";
+            cout << "Digite novos pontos\n";
+        cin >> x >> y;
+        }
+        else if (x < 0 && y < 0) {
+            cout << "Quadrante 3\n";
+            cout << "Digite novos pontos\n";
+        cin >> x >> y;
+        }
+        else{
+            cout << "Quadrante 4\n";
+            cout << "Digite novos pontos\n";
+        cin >> x >> y;
+        }
+        
+    }
+    cout << "Valor nulo!";
+    
+    
+
+    return 0;
+}

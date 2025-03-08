@@ -1,0 +1,30 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    double preco, quantidade,  dinheiro, troco;
+    
+    cout << "Valor do produto: R$ ";
+    cin >> preco;
+    cout << "Quantidade: ";
+    cin >> quantidade;
+    cout << fixed << setprecision(2);
+    double total = preco * quantidade;
+    cout << "Total da compra foi: R$ " << total << endl;
+    cout << "Dinheiro recebido: ";
+    cin >> dinheiro;
+    
+   if (dinheiro >= total) {
+       cout << fixed << setprecision(2);
+       troco = dinheiro - total;
+       cout << "O troco é de: R$ " << troco;
+   }
+   
+   else {
+       cout << "Está faltando dinheiro!!!";
+   }
+
+    return 0;
+}

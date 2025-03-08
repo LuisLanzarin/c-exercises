@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x;
+    cout << "Quantos valores serão fornecidos? ";
+    cin >> x;
+    int contador1 = 0;
+    int contador2 = 0;
+    for (int i = 0; i < x; i++) {
+    int numero;
+    cout << "Digite os números: " << endl;
+    cin >> numero;
+    if (numero < 10 || numero > 20) {
+        contador1++;
+    }
+    if (numero <= 20 && numero >= 10) {
+        contador2++;
+    }
+    }
+    cout << contador1 << "Numeros estão fora do intervalo.\n";
+    cout << contador2 << "Numeros estão dentro do intervalo.\n";
+    return 0;
+}

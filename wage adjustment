@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    float salario;
+    cout << "Qual o seu salário? ";
+    cin >> salario;
+    
+    if (salario > 0 && salario <= 280.00) {
+        cout << "Seu salário atual é: R$ " << salario << "\n";
+        cout << "Seu salario aumentará em 20% \n";
+        float aumento;
+        aumento = salario*0.2;
+        cout << "Seu salário aumentou em: R$ " << aumento << "\n";
+        float novo_salario;
+        novo_salario = salario+aumento;
+        cout << "Seu novo salário será de: R$ " << novo_salario;
+    }
+    
+    else if (salario > 280 && salario <= 700.00) {
+        cout << "Seu salário atual é: R$ " << salario << "\n";
+        cout << "Seu salario aumentará em 15% \n";
+        float aumento;
+        aumento = salario*0.15;
+        cout << "Seu salário aumentou em: R$ " << aumento << "\n";
+        float novo_salario;
+        novo_salario = salario+aumento;
+        cout << "Seu novo salário será de: R$ " << novo_salario;
+    }
+    
+    else if (salario > 700 && salario <= 1500.00) {
+        cout << "Seu salário atual é: R$ " << salario << "\n";
+        cout << "Seu salario aumentará em 10% \n";
+        float aumento;
+        aumento = salario*0.10;
+        cout << "Seu salário aumentou em: R$ " << aumento << "\n";
+        float novo_salario;
+        novo_salario = salario+aumento;
+        cout << "Seu novo salário será de: R$ " << novo_salario;
+    }
+    
+    else  {
+        cout << "Seu salário atual é: R$ " << salario << "\n";
+        cout << "Seu salario aumentará em 5% \n";
+        float aumento;
+        aumento = salario*0.05;
+        cout << "Seu salário aumentou em: R$ " << aumento << "\n";
+        float novo_salario;
+        novo_salario = salario+aumento;
+        cout << "Seu novo salário será de: R$ " << novo_salario;
+    }
+    
+    
+
+
+    return 0;
+}

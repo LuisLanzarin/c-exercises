@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x;
+    cout << "Quantos produtos serão inseridos? ";
+    cin >> x;
+    string nome[x];
+    float precocompra[x];
+    float precovenda[x];
+    float totalcompra = 0;
+    float totalvenda = 0;
+    for (int i = 0; i < x; i++) {
+    cout << "Produto " << i+1 << ": " << endl;
+    cout << "Nome: ";
+    cin >> nome[i];
+    cout << "Preço de compra: ";
+    cin >> precocompra[i];
+    cout << "Preço de venda: ";
+    cin >> precovenda[i];
+    totalcompra += precocompra[i];
+    totalvenda += precovenda[i];
+    }
+    float abaixo10 = 0;
+    float entre10e20 = 0;
+    float acima20 = 0;
+    for (int i = 0; i < x; i++) {
+    if (precovenda[i] / precocompra[i] < 1.10) {
+        abaixo10++;
+    }
+    else if (precovenda[i] / precocompra[i] >= 1.1 && precovenda[i] / precocompra[i] <= 1.2) {
+        entre10e20++;
+    }
+    else if (precovenda[i] / precocompra[i] > 1.2) {
+        acima20++;
+    }
+    }
+    cout << "RELATÓRIO: \n";
+    cout << "Lucro abaixo de 10%: " << abaixo10 << endl;
+    cout << "Lucro entre 10% / 20%: " << entre10e20 << endl;
+    cout << "Lucro acima de 20%: " << acima20 << endl;
+    cout << "Valor total de compra: R$ " << totalcompra << endl;
+    cout << "Valor total de venda: R$ " << totalvenda << endl;
+    float lucro = totalvenda - totalcompra;
+    cout << "Lucro total: " << lucro << endl;
+
+    return 0;
+}

@@ -1,2 +1,2 @@
 # c-practice
-c++ exercises made for basic programming course
+c++ projects to develop

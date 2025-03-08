@@ -1,0 +1,44 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main()
+{
+    int x;
+    cout << "Quantos casos de teste de cobaia serão digitados?";
+    cin >> x;
+    float contagem1 = 0;
+    float contagem2 = 0;
+    float contagem3 = 0;
+    for (int i = 0; i < x; i++) {
+        string tipo;
+        int quantCobaias;
+        cout << "Quantaidade de cobaias: ";
+        cin >> quantCobaias;
+        cout << "Tipo de cobaia: ";
+        cin >> tipo;
+    if (tipo == "c") {
+        contagem1 += quantCobaias;
+        }
+    if (tipo == "r") {
+        contagem2 += quantCobaias;
+    }
+    if (tipo == "s") {
+        contagem3 += quantCobaias;
+    }
+}
+    float contagemT = (contagem3 + contagem2 + contagem1);
+    cout << "RELATÓRIO FINAL: \n" << "TOTAL: " << contagemT << endl;
+    cout << "TOTAL DE COELHOS: " << contagem1 << endl;
+    cout << "TOTAL DE RATOS: " << contagem2 << endl;
+    cout << "TOTAL DE SAPOS: " << contagem3 << endl;
+    float porcent1 = (contagem1 / contagemT) * 100;
+    float porcent2 = (contagem2 / contagemT) * 100;
+    float porcent3 = (contagem3 / contagemT) * 100;
+    cout << fixed << setprecision (2);
+    cout << "Percentual de coelhos: " << porcent1 << "%" << endl;
+    cout << fixed << setprecision (2);
+    cout << "Percentual de ratos: " << porcent2 << "%" << endl;
+    cout << fixed << setprecision (2);
+    cout << "Percentual de sapos: " << porcent3 << "%" << endl;
+    return 0;
+}

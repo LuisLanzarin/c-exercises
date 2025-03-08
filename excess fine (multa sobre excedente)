@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    
+    cout << "Qual o peso dos peixes?";
+    float peso;
+    cin >> peso;
+    
+    if (peso > 50) 
+    {
+        float excesso;
+        excesso = (peso-50);
+        cout << "O peso ultaprassou o valor permitido! O valor excedido foi de: " << excesso << "\n";
+        float multa;
+        multa = excesso*4;
+        cout << "A multa a ser paga é de: R$ " << multa;
+        
+    }
+    
+    else{
+    cout << "Peso dentro do valor permitido";
+    }
+
+    return 0;
+}
